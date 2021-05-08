@@ -1,0 +1,42 @@
+{% extends 'ex01/base.html' %}
+{% load static %}
+{% block title %}
+    Ex01: Template engine.
+{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'ex01/style2.css' %}">
+{% endblock %}
+​
+{% block content %}
+    <h3>Template blocks</h3>
+    <p>The most powerful – and thus the most complex – part of Django’s template
+engine is template inheritance. Template inheritance allows you to build a base
+“skeleton” template that contains all the common elements of your site and
+defines <strong>blocks</strong> that child templates can override.</p>
+<p>The template, which we’ll call <code class="docutils literal notranslate"><span class="pre">base.html</span></code>, defines an HTML skeleton
+document that you might use for a two-column page. It’s the job of “child”
+templates to fill the empty blocks with content.</p>
+<p>The <code class="xref std std-ttag docutils literal notranslate"><span class="pre">extends</span></code></a> tag is the key here. It tells the template engine that
+this template “extends” another template. When the template system evaluates
+this template, first it locates the parent – in this case, “base.html”.</p>
+<span class="pre">block</span></code></a> tag does is to tell the template
+engine that a child template may override those portions of the template.</p>
+<br>
+<h3>for</h3>
+A Django template is a text document or a Python string marked-up using the Django template language. Django being a powerful Batteries included framework provides convenience to rendering data in a template. Django templates not only allow paassing data from view to template, but also provides some limited features of a programming such as variables, for loops, comments, extends etc.
+This article revolves about how to use for tag in Templates. for tag loops over each item in an array, making the item available in a context variable.
+</dd>
+</p>
+    <br>
+    <p>
+<h3>if, elif, and else</h3>
+<p>
+A Django template is a text document or a Python string marked-up using the Django template language. Django being a powerful Batteries included framework provides convenience to rendering data in a template. Django templates not only allow passing data from view to template, but also provides some limited features of a programming such as variables, for loops, comments, extends, if else etc.
+This article revolves about how to use if tag in Templates. The { % if % } tag evaluates a variable, and if that variable is “true” (i.e. exists, is not empty, and is not a false boolean value) the contents of the block are output.
+    </p>
+    <br>
+<h3>Passing context variables</h3>
+    <p>
+A Django template is a text document or a Python string marked-up using the Django template language. Django being a powerful Batteries included framework provides convenience to rendering data in a template. Django templates not only allow paassing data from view to template, but also provides some limited features of a programming such as variables, for loops, etc.
+This article revolves about how to use a variable in Template. A variable outputs a value from the context, which is a dict-like object mapping keys to values.</p>
+{% endblock %}

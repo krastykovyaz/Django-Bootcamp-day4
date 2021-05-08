@@ -1,0 +1,81 @@
+{% extends 'ex01/base.html' %}
+{% block title %}
+Ex01: Django, web framework.
+{% endblock %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'ex01/style1.css' %}">
+{% endblock %}
+
+{% block content %}
+<h3>Django</h3>
+<dt>Complete</dt>
+<dd>Django follows the "Batteries included" philosophy and provides almost everything developers might want to do "out
+    of the box". Because everything you need is part of the one "product",&nbsp;it all works seamlessly together,
+    follows consistent design principles, and has extensive and <a href="https://docs.djangoproject.com/en/stable/"
+                                                                   class="external" rel=" noopener">up-to-date
+        documentation</a>.
+</dd>
+<dt>Versatile</dt>
+<dd>Django can be (and has been) used to build almost any type of website&nbsp;— from content management systems and
+    wikis, through to&nbsp;social networks and news sites. It can work with any client-side framework, and can deliver
+    content in almost any format (including HTML, RSS feeds, JSON, XML, etc). The site you are currently reading is
+    built with Django!<br>
+    <br>
+    Internally, while it provides choices for almost any functionality you might want&nbsp;(e.g. several popular
+    databases, templating engines, etc.), it can also be extended to use other components if needed.
+</dd>
+<dt>Secure</dt>
+<dd>Django helps developers avoid many common security mistakes by providing a framework that has been engineered to "do
+    the right things" to protect the website automatically. For example, Django provides a secure way to manage user
+    accounts and passwords, avoiding common mistakes like putting session information in cookies where it is vulnerable&nbsp;(instead
+    cookies just contain a key, and the actual data is stored in the database) or directly storing passwords rather than
+    a password hash.<br>
+    <br>
+    <em>A password hash is a fixed-length value created by sending the password through&nbsp;a <a
+            href="https://en.wikipedia.org/wiki/Cryptographic_hash_function" class="external" rel=" noopener">cryptographic&nbsp;hash
+        function</a>.&nbsp;Django can check if an entered&nbsp;password is correct by running it through the hash
+        function&nbsp;and comparing the output to&nbsp;the stored hash value. However due to&nbsp;the "one-way" nature
+        of the function,&nbsp;even if a stored hash value is compromised&nbsp;it is hard for an attacker to work out&nbsp;the
+        original password.</em><br>
+    <br>
+    Django enables protection against many vulnerabilities by default, including&nbsp;SQL injection, cross-site
+    scripting, cross-site request forgery and clickjacking.
+</dd>
+<dt>Scalable</dt>
+<dd>Django uses a component-based “<a href="https://en.wikipedia.org/wiki/Shared_nothing_architecture" class="external"
+                                      rel=" noopener">shared-nothing</a>” architecture (each part of the architecture is
+    independent of the others, and can hence be replaced or changed if needed). Having a&nbsp;clear separation between
+    the different parts means that it can scale for increased traffic by adding hardware at any&nbsp;level: caching
+    servers,&nbsp;database servers, or application servers.&nbsp;Some of the busiest sites have successfully scaled
+    Django to meet their demands (e.g.&nbsp;Instagram and Disqus, to name just two).
+</dd>
+<dt>Maintainable</dt>
+<dd>Django code is written using design principles and patterns that encourage the creation of maintainable and reusable
+    code. In particular, it makes use of&nbsp;the Don't Repeat Yourself (DRY) principle so there is no unnecessary
+    duplication, reducing the amount of code. Django also promotes the grouping of&nbsp;related functionality into
+    reusable "applications"&nbsp;and, at a lower level, groups related code&nbsp;into&nbsp;modules.
+</dd>
+<dt>Portable</dt>
+<dd>Django is written in Python, which runs on many platforms. That means that you are not tied to any particular server
+    platform, and can run your applications on many flavours of Linux, Windows, and Mac OS X. Furthermore,&nbsp;Django
+    is well-supported by many web hosting providers, who often provide specific infrastructure and documentation for
+    hosting Django sites.
+</dd>
+</dl></div>
+<dd>
+<dd>Django was initially developed between 2003 and 2005 by a web team&nbsp;who were responsible for&nbsp;creating and
+    maintaining newspaper websites. After creating a number of sites, the team&nbsp;began to factor out and reuse lots
+    of common code and design patterns. This common code evolved&nbsp;into a&nbsp;generic web&nbsp;development
+    framework, which was&nbsp;open-sourced as the "Django" project&nbsp;in July 2005.&nbsp;
+</dd>
+
+
+<h3>History</h3>
+<div><p>Django was initially developed between 2003 and 2005 by a web team&nbsp;who were responsible for&nbsp;creating
+    and maintaining newspaper websites. After creating a number of sites, the team&nbsp;began to factor out and reuse
+    lots of common code and design patterns. This common code evolved&nbsp;into a&nbsp;generic web&nbsp;development
+    framework, which was&nbsp;open-sourced as the "Django" project&nbsp;in July 2005.&nbsp;</p>
+</div>
+    {% endblock %}
+
